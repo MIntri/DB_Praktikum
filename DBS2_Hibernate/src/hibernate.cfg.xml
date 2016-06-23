@@ -28,8 +28,10 @@
        - create: creates the schema, destroying previous data.
        - create-drop: drop the schema at the end of the session. 
        -->
-    <property name="hbm2ddl.auto">create</property>
+    <property name="hbm2ddl.auto">update</property>
     <!-- Mapping files -->
     <mapping class="org.dbprakt.hibernate.annotations.Promoter"/>
+    <mapping class="org.dbprakt.hibernate.annotations.Event"/>
+    <mapping class="org.dbprakt.hibernate.annotations.Person"/>
   </session-factory>
 </hibernate-configuration>

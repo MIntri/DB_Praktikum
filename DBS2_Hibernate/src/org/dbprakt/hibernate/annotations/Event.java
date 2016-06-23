@@ -4,26 +4,31 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
 
 /**
  * EVENTS
  */
-// TODO
+@Entity
 public class Event {
 
-	// TODO
+	@Id
+	@GeneratedValue(generator="increment") 
+	@GenericGenerator(name="increment", strategy = "increment")
     private int eventId;
 	
-    // TODO
+	// Rest auto mapping
     private String eventTitle;
 	
-    // TODO
     private Date eventDate;
     
-    // TODO
     private Set<Person> attendees;
 
-    // TODO
     private Promoter promoter;
     
     /**

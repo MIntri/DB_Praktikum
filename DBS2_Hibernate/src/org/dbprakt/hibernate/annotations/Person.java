@@ -1,15 +1,22 @@
 package org.dbprakt.hibernate.annotations;
 
-//TODO
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
 public class Person {
 
-	// TODO
+	@Id
+	@GeneratedValue(generator="increment") 
+	@GenericGenerator(name="increment", strategy = "increment")
 	private int id;
 	
-	// TODO
+	// rest automapping
 	private String name;
-	
-	// TODO
+
 	private int age;
 	
 	public Person() {}
